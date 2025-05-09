@@ -1,6 +1,27 @@
-﻿// See https://aka.ms/new-console-template for more information
+﻿using Aula01._1bim;
 using System.Runtime.InteropServices;
 
+while(true)
+{
+    int opcao;
+    Console.WriteLine("0 - Sair");
+    Console.WriteLine("01 - Idade");
+}
+
+/*float salario = float.Parse(Console.ReadLine());
+float porcentagem = int.Parse(Console.ReadLine());
+CalculaAumento aumento = new CalculaAumento();
+aumento.Aumentar(salario, porcentagem);
+Console.WriteLine($"Salario inicial: R${aumento.salarioInicial}\nSalario final: R${aumento.salarioFinal}\nAumento: R${aumento.aumento}\nPorcentagem: {aumento.porcentagem}%");*/
+
+/*int metros = int.Parse(Console.ReadLine());
+MetrosMilimetros milimetros = new MetrosMilimetros();
+Console.WriteLine(milimetros.Milimetros(metros));*/
+
+/*SomaDoisNumeros soma = new SomaDoisNumeros();
+Console.WriteLine(soma.Somar(2, 3));*/
+
+/*
 Console.WriteLine("Hello, World!");
 Console.WriteLine("Informe seu nome: ");
 string nome = Console.ReadLine();
@@ -9,6 +30,10 @@ Console.WriteLine("Informe sua idade: ");
 try
 {
     int idade = int.Parse(Console.ReadLine());
+    if ( idade == 0 )
+    {
+        throw new DuvidaMatematica02Exception();
+    }
     if ( idade == 1)
     {
         throw new DuvidaMatematicaException();
@@ -46,4 +71,4 @@ catch(Exception e)
 {
     Console.WriteLine("Ocorreu um erro desconhecido, contate o desenvolvedor.");
 }
-
+*/
