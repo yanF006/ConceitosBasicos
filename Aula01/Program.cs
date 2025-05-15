@@ -1,76 +1,38 @@
-﻿using Aula01._1bim;
-using System.Runtime.InteropServices;
+﻿using System.Runtime.InteropServices;
+using Aula01._1bim;
 
-while(true)
+while (true)
 {
-    int opcao;
-    Console.WriteLine("0 - Sair");
-    Console.WriteLine("1 - Idade");
-    Console.WriteLine("10 - Imposto de Renda");
-    opcao = int.Parse(Console.ReadLine());
-}
+    try
+    {
+        int opcao;
 
-/*float salario = float.Parse(Console.ReadLine());
-float porcentagem = int.Parse(Console.ReadLine());
-CalculaAumento aumento = new CalculaAumento();
-aumento.Aumentar(salario, porcentagem);
-Console.WriteLine($"Salario inicial: R${aumento.salarioInicial}\nSalario final: R${aumento.salarioFinal}\nAumento: R${aumento.aumento}\nPorcentagem: {aumento.porcentagem}%");*/
+        Console.WriteLine("Escolha uma opção:");
+        Console.WriteLine("0.\tSair");
+        Console.WriteLine("1.\tIdade");
+        Console.WriteLine("10.\tImposto de Renda");
+        Console.WriteLine("11.\tAdivinhar Número");
 
-/*int metros = int.Parse(Console.ReadLine());
-MetrosMilimetros milimetros = new MetrosMilimetros();
-Console.WriteLine(milimetros.Milimetros(metros));*/
 
-/*SomaDoisNumeros soma = new SomaDoisNumeros();
-Console.WriteLine(soma.Somar(2, 3));*/
+        Console.Write("--> ");
+        opcao = int.Parse(Console.ReadLine());
 
-/*
-Console.WriteLine("Hello, World!");
-Console.WriteLine("Informe seu nome: ");
-string nome = Console.ReadLine();
-Console.WriteLine($"Seja bem-vindo(a) {nome}");
-Console.WriteLine("Informe sua idade: ");
-try
-{
-    int idade = int.Parse(Console.ReadLine());
-    if ( idade == 0 )
-    {
-        throw new DuvidaMatematica02Exception();
-    }
-    if ( idade == 1)
-    {
-        throw new DuvidaMatematicaException();
-    }
-    Console.WriteLine("A idade informada foi " + idade);
-    if (idade % 2 == 0)
-    {
-        Console.WriteLine("A idade informada corresponde a um número par!");
-    }
-    else
-    {
-        Console.WriteLine("A idade informada corresponde a um número ímpar!");
-    }
-    string primo = "";
-    for (int i = 2; i <= idade / 2; i++)
-    {
-        if (idade % i == 0)
+        if (opcao == 0) break;
+
+        switch (opcao)
         {
-            primo = "não ";
-            break;
+            case 10:
+                ImpostoDeRenda impostoDeRenda = new ImpostoDeRenda();
+                impostoDeRenda.calcularDeducao();
+                break;
+            case 11:
+                AdivinharNumero adivinharNumero = new AdivinharNumero();
+                adivinharNumero.jogar();
+                break;
         }
     }
-    Console.WriteLine($"A idade {primo} corresponde a um número primo");
+    catch (FormatException e)
+    {
+        Console.WriteLine("A opção informada não é um número válido.");
+    }
 }
-catch(FormatException e)
-{
-    Console.WriteLine("A idade digitada não corresponde a um número inteiro");
-}
-
-catch(DuvidaMatematicaException e)
-{
-    Console.WriteLine("Não se sabe se um é primo ou não!");
-}
-catch(Exception e)
-{
-    Console.WriteLine("Ocorreu um erro desconhecido, contate o desenvolvedor.");
-}
-*/
