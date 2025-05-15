@@ -14,6 +14,7 @@ namespace Aula01._1bim
         public void jogar()
         {
             int numeroAleatorio = aleatorio.Next(0, 101);
+            int palpite;
 
             Console.WriteLine("Você tem 10 tentativas para adivinhar um número entre 0 e 100.");
             while (tentativas > 0)
@@ -21,7 +22,7 @@ namespace Aula01._1bim
                 try
                 {
                     Console.Write($"Tentativas restantes: {tentativas}. Digite seu palpite: ");
-                    int palpite = int.Parse(Console.ReadLine());
+                    palpite = int.Parse(Console.ReadLine());
                 }
                 catch (FormatException e)
                 {
