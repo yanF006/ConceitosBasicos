@@ -5,7 +5,9 @@ while(true)
 {
     int opcao;
     Console.WriteLine("0 - Sair");
-    Console.WriteLine("01 - Idade");
+    Console.WriteLine("1 - Idade");
+    Console.WriteLine("10 - Imposto de Renda");
+    opcao = int.Parse(Console.ReadLine());
 }
 
 /*float salario = float.Parse(Console.ReadLine());
