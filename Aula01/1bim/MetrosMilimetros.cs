@@ -8,9 +8,20 @@ namespace Aula01._1bim
 {
     public class MetrosMilimetros
     {
-        public float Milimetros(float n)
+        float metros;
+        public void Milimetros()
         {
-            return n * 1000;
+            try
+            {
+                Console.WriteLine("Qual o valor em metros? ");
+                metros = float.Parse(Console.ReadLine());
+            }
+
+            catch (Exception e)
+            {
+                Console.WriteLine("Número inválido");
+            }
+            Console.WriteLine($"" + metros + " mm em metros fica " + metros / 1000 + "mm");
         }
     }
 }

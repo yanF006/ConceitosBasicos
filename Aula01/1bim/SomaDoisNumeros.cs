@@ -8,9 +8,28 @@ namespace Aula01._1bim
 {
     internal class SomaDoisNumeros
     {
-        public int Somar(int n1, int n2)
+        int a, b;
+        public void Somar()
         {
-            return n1 + n2;
+            try
+            {
+                Console.WriteLine("Qual o primeiro valor para somar? ");
+                a = int.Parse(Console.ReadLine());
+            }
+            catch(Exception e)
+            {
+                Console.WriteLine("Valor inválido");
+            }
+            try
+            {
+                Console.WriteLine("Qual o segundo valor? ");
+                b = int.Parse(Console.ReadLine());
+            }
+            catch(Exception e)
+            {
+                Console.WriteLine("Valor inválido");
+            }
+            Console.WriteLine($"O resultado da soma é " + (a+b));
         }
     }
 }

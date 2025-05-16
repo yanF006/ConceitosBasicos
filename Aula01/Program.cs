@@ -9,10 +9,14 @@ while (true)
 
         Console.WriteLine("Escolha uma opção:");
         Console.WriteLine("0.\tSair");
-        Console.WriteLine("1.\tIdade");
+        Console.WriteLine("1.\tSoma de dois valores");
+        Console.WriteLine("2.\tConversão metros para milímetros");
+        Console.WriteLine("3.\tAumento de salário");
+        Console.WriteLine("4.\tCalculadora de desconto");
+        Console.WriteLine("5.\tAluguel de carro");
         Console.WriteLine("6.\tIMC");
         Console.WriteLine("7.\tTabuadas");
-        Console.WriteLine("8.\tMúltiplos de 3 entre 0 e 10");
+        Console.WriteLine("8.\tMúltiplos de 3 entre 0 e 100");
         Console.WriteLine("9.\tFatoriais de 0 até 10");
         Console.WriteLine("10.\tImposto de Renda");
         Console.WriteLine("11.\tAdivinhar Número");
@@ -25,6 +29,26 @@ while (true)
 
         switch (opcao)
         {
+            case 1:
+                SomaDoisNumeros somaDoisNumeros = new SomaDoisNumeros();
+                somaDoisNumeros.Somar();
+                break;
+            case 2:
+                MetrosMilimetros metrosMilimetros = new MetrosMilimetros();
+                metrosMilimetros.Milimetros();
+                break;
+            case 3:
+                CalculaAumento aumento = new CalculaAumento();
+                aumento.Aumentar();
+                break;
+            case 4:
+                CalcularDesconto calcularDesconto = new CalcularDesconto();
+                calcularDesconto.descontador();
+                break;
+            case 5:
+                AluguelCarro aluguelCarro = new AluguelCarro();
+                aluguelCarro.alugador();
+                break;
             case 6:
                 CalcularIMC calcularIMC = new CalcularIMC();
                 calcularIMC.IMC();

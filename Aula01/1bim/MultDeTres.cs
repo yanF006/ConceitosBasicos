@@ -10,7 +10,7 @@ namespace Aula01._1bim
     {
         public void multiplosdetres()
         {
-            for (int i = 0; i * 3 < 10; i++)
+            for (int i = 0; i * 3 < 100; i++)
             {
                 Console.WriteLine($"" + i * 3);
             }
