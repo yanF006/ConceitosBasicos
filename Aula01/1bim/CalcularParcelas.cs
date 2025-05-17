@@ -24,13 +24,13 @@ namespace Aula01._1bim
                 Console.Write("Entre com o valor do veículo: R$");
                 valorVeiculo = float.Parse(Console.ReadLine());
             }
-            catch(FormatException e)
+            catch (FormatException e)
             {
                 Console.WriteLine("O valor informado não é um número válido.");
                 return 0;
             }
 
-            if(valorVeiculo < 0)
+            if (valorVeiculo < 0)
             {
                 Console.WriteLine("O valor informado não pode ser negativo.");
                 return 0;
@@ -41,13 +41,13 @@ namespace Aula01._1bim
                 Console.Write("Entre com o número de parcelas: ");
                 numParcelas = int.Parse(Console.ReadLine());
             }
-            catch(FormatException e)
+            catch (FormatException e)
             {
                 Console.WriteLine("O número de parcelas informado não é um número válido.");
                 return 0;
             }
 
-            if(numParcelas < 0)
+            if (numParcelas < 0)
             {
                 Console.WriteLine("O número de parcelas informado não pode ser negativo.");
                 return 0;
@@ -74,12 +74,11 @@ namespace Aula01._1bim
 
             for (int i = 1; i <= numParcelas; i++)
             {
-                valorTotal += valorParcelas;
-                valorParcelas *= (1 + taxaJuros / 100);
+                valorTotal = valorTotal + valorParcelas;
+                valorParcelas = valorParcelas * (1 + taxaJuros / 100);
             }
 
-            Console.WriteLine($"Valor total do carro: R${valorTotal:F2}");
-            Console.WriteLine($"Valor de cada parcela: R${valorTotal / numParcelas:F2}");
+            Console.WriteLine($"Valor total do carro: R${valorTotal}");
             return valorTotal;
         }
     }

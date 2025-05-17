@@ -20,8 +20,9 @@ while (true)
         Console.WriteLine("9.\tFatoriais de 0 até 10");
         Console.WriteLine("10.\tImposto de Renda");
         Console.WriteLine("11.\tAdivinhar Número");
-        Console.WriteLine("12.\tCalcular Parcelas de Veículo");
-        Console.WriteLine("13.\tCalcular Aposentadoria");
+        Console.WriteLine("12.\tFinanciamento de veículo");
+        Console.WriteLine("13.\tAposentadoria");
+
 
         Console.Write("--> ");
         opcao = int.Parse(Console.ReadLine());
@@ -83,7 +84,7 @@ while (true)
                 calcularAposentadoria.calcularRenda();
                 break;
             default:
-                Console.WriteLine("Opção inválida. Tente novamente.");
+                Console.WriteLine("Valor inválido");
                 break;
         }
     }

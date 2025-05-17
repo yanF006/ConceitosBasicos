@@ -48,7 +48,7 @@ namespace Aula01._1bim
                 Console.WriteLine("A idade de aposentadoria informada não pode ser negativa.");
                 return 0;
             }
-            else if(idadeAposentadoria < idade)
+            else if (idadeAposentadoria < idade)
             {
                 Console.WriteLine("A idade de aposentadoria informada não pode ser menor que a sua idade atual.");
                 return 0;
@@ -83,15 +83,15 @@ namespace Aula01._1bim
                 Console.WriteLine("A taxa de rendimento informada não pode ser negativa.");
                 return 0;
             }
-            
-            for(int i = 0; i < (idadeAposentadoria - idade) * 12; i++)
+
+            for (int i = 0; i < (idadeAposentadoria - idade) * 12; i++)
             {
                 valorTotal += valorMensal;
                 valorTotal *= (1 + taxaRendimento / 100);
             }
 
             Console.WriteLine($"Após {idadeAposentadoria - idade} anos, você terá R${valorTotal:F2} guardados.");
-            Console.WriteLine($"Com esse valor, você sua renda será {valorTotal * (taxaRendimento / 100):F2}");
+            Console.WriteLine($"Com esse valor, você sua renda será {valorTotal * (taxaRendimento / 100)}");
             return valorTotal;
         }
     }
