@@ -78,7 +78,8 @@ namespace Aula01._1bim
                 valorParcelas *= (1 + taxaJuros / 100);
             }
 
-            Console.WriteLine($"Valor total do carro: R${valorTotal}");
+            Console.WriteLine($"Valor total do carro: R${valorTotal:F2}");
+            Console.WriteLine($"Valor de cada parcela: R${valorTotal / numParcelas:F2}");
             return valorTotal;
         }
     }

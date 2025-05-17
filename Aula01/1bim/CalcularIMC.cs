@@ -23,6 +23,7 @@ namespace Aula01._1bim
             catch (Exception e)
             {
                 Console.WriteLine("O peso informado não é um número válido");
+                return;
             }
 
             try
@@ -34,9 +35,34 @@ namespace Aula01._1bim
             catch (Exception e)
             {
                 Console.WriteLine("A altura informada não é um número válido");
+                return;
             }
             resultadoIMC = peso / (altura * altura);
             Console.WriteLine($"O seu IMC é: " + resultadoIMC);
+            if(resultadoIMC <= 18.5)
+            {
+                Console.WriteLine("Você está abaixo do peso ideal.");
+            }
+            else if (resultadoIMC <= 24.9)
+            {
+                Console.WriteLine("Você está no peso ideal.");
+            }
+            else if (resultadoIMC <= 29.9)
+            {
+                Console.WriteLine("Você está com sobrepeso.");
+            }
+            else if (resultadoIMC <= 34.9)
+            {
+                Console.WriteLine("Você está com obesidade grau I.");
+            }
+            else if (resultadoIMC <= 39.9)
+            {
+                Console.WriteLine("Você está com obesidade grau II.");
+            }
+            else
+            {
+                Console.WriteLine("Você está com obesidade grau III.");
+            }
         }
     }
 }

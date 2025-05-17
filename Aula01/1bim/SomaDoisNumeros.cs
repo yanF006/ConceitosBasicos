@@ -19,6 +19,7 @@ namespace Aula01._1bim
             catch(Exception e)
             {
                 Console.WriteLine("Valor inválido");
+                return;
             }
             try
             {
@@ -28,6 +29,7 @@ namespace Aula01._1bim
             catch(Exception e)
             {
                 Console.WriteLine("Valor inválido");
+                return;
             }
             Console.WriteLine($"O resultado da soma é " + (a+b));
         }

@@ -19,6 +19,7 @@ namespace Aula01._1bim
             catch
             {
                 Console.WriteLine("Número inserido inválido\n");
+                return;
             }
             for(int i = 1; i < 11; i++)
             {

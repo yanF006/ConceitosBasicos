@@ -22,7 +22,7 @@ namespace Aula01._1bim
                 try
                 {
                     Console.Write($"Tentativas restantes: {tentativas}. Digite seu palpite: ");
-                    int palpite = int.Parse(Console.ReadLine());
+                    palpite = int.Parse(Console.ReadLine());
                 }
                 catch (FormatException e)
                 {

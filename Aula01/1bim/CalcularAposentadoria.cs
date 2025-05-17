@@ -91,7 +91,7 @@ namespace Aula01._1bim
             }
 
             Console.WriteLine($"Após {idadeAposentadoria - idade} anos, você terá R${valorTotal:F2} guardados.");
-            Console.WriteLine($"Com esse valor, você sua renda será {valorTotal * (taxaRendimento / 100)}");
+            Console.WriteLine($"Com esse valor, você sua renda será {valorTotal * (taxaRendimento / 100):F2}");
             return valorTotal;
         }
     }

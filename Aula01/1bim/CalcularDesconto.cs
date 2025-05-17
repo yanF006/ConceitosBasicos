@@ -19,6 +19,7 @@ namespace Aula01._1bim
             catch (Exception e)
             {
                 Console.WriteLine("Número inválido");
+                return;
             }
             try
             {
@@ -28,6 +29,7 @@ namespace Aula01._1bim
             catch (Exception e)
             {
                 Console.WriteLine("Número inválido");
+                return;
             }
             valorFinal = valorInicial * (1 - desconto / 100);
             Console.WriteLine($"O valor do produto é: " + valorInicial);

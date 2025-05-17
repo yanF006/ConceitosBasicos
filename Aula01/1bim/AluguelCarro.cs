@@ -19,6 +19,7 @@ namespace Aula01._1bim
             catch(Exception e)
             {
                 Console.WriteLine("Valor inválido");
+                return;
             }
             try
             {
@@ -28,6 +29,7 @@ namespace Aula01._1bim
             catch (Exception e)
             {
                 Console.WriteLine("Valor inválido");
+                return;
             }
             try
             {
@@ -37,8 +39,9 @@ namespace Aula01._1bim
             catch (Exception e)
             {
                 Console.WriteLine("Valor inválido");
+                return;
             }
-            valorFinal = (quilometragemFinal - quilometragemInicial * 35 / 100) + totalDiasAlugados * 95;
+            valorFinal = ((quilometragemFinal - quilometragemInicial) * 35 / 100) + totalDiasAlugados * 95;
             Console.WriteLine("O valor do aluguel será: " + valorFinal);
         }
     }

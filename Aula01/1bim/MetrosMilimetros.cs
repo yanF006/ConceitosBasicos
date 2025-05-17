@@ -20,8 +20,9 @@ namespace Aula01._1bim
             catch (Exception e)
             {
                 Console.WriteLine("Número inválido");
+                return;
             }
-            Console.WriteLine($"" + metros + " mm em metros fica " + metros / 1000 + "mm");
+            Console.WriteLine($"" + metros + " mm em metros fica " + metros * 1000 + "mm");
         }
     }
 }

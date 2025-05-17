@@ -21,6 +21,7 @@ namespace Aula01._1bim
             catch(Exception e)
             {
                 Console.WriteLine("Número inválido");
+                return;
             }
             try
             {
@@ -30,8 +31,9 @@ namespace Aula01._1bim
             catch (Exception e)
             {
                 Console.WriteLine("Número inválido");
+                return;
             }
-            salarioFinal = salarioInicial + salarioInicial * (1 + aumento / 100);
+            salarioFinal = salarioInicial + salarioInicial * (aumento / 100);
             Console.WriteLine($"O salário inicial é: " + salarioInicial);
             Console.WriteLine($"O percentual é: " + aumento);
             Console.WriteLine($"O valor do aumento é: " + (salarioFinal - salarioInicial));

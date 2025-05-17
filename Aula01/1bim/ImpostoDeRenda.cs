@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -9,6 +10,7 @@ namespace Aula01._1bim
     public class ImpostoDeRenda
     {
         float baseCalculo;
+        float valorFinal;
         float deducao;
         int dependentes;
 
@@ -50,25 +52,32 @@ namespace Aula01._1bim
             else if (baseCalculo <= 1903.98)
             {
                 deducao = 0;
+                valorFinal = 0;
             }
             else if (baseCalculo <= 2826.65)
             {
                 deducao = 142.80f;
+                valorFinal = baseCalculo * 0.075f - deducao * dependentes;
             }
             else if (baseCalculo <= 3751.05)
             {
                 deducao = 354.80f;
+                valorFinal = baseCalculo * 0.15f - deducao * dependentes;
             }
             else if (baseCalculo <= 4664.68)
             {
                 deducao = 636.13f;
+                valorFinal = baseCalculo * 0.225f - deducao * dependentes;
             }
             else
             {
                 deducao = 869.36f;
+                valorFinal = baseCalculo * 0.275f - deducao * dependentes;
             }
 
-            Console.WriteLine($"A dedução total é: R${deducao}");
+            Console.WriteLine($"A dedução por dependente é: R${deducao:F2}");
+            Console.WriteLine($"O valor total a pagar é: R${valorFinal:F2}");
+            Console.WriteLine($"O salário líquido é: R${baseCalculo - valorFinal:F2}");
             return deducao;
         }
     }
