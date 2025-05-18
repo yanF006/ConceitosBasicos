@@ -39,29 +39,29 @@ namespace Aula01._1bim
             }
             resultadoIMC = peso / (altura * altura);
             Console.WriteLine($"O seu IMC é: " + resultadoIMC);
-            if (resultadoIMC <= 18.5)
+            if(resultadoIMC <= 18.5)
             {
-                Console.WriteLine("Abaixo do peso");
+                Console.WriteLine("Você está abaixo do peso ideal.");
             }
             else if (resultadoIMC <= 24.9)
             {
-                Console.WriteLine("Peso ideal");
+                Console.WriteLine("Você está no peso ideal.");
             }
             else if (resultadoIMC <= 29.9)
             {
-                Console.WriteLine("Levemente acima do peso");
+                Console.WriteLine("Você está com sobrepeso.");
             }
             else if (resultadoIMC <= 34.9)
             {
-                Console.WriteLine("Obesidade Grau I");
+                Console.WriteLine("Você está com obesidade grau I.");
             }
             else if (resultadoIMC <= 39.9)
             {
-                Console.WriteLine("Obesidade Grau II");
+                Console.WriteLine("Você está com obesidade grau II.");
             }
             else
             {
-                Console.WriteLine("Obesidade Grau III");
+                Console.WriteLine("Você está com obesidade grau III.");
             }
         }
     }
